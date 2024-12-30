@@ -1,656 +1,386 @@
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+@import url(https://fonts.bunny.net/css?family=ubuntu-mono:400|workbench:400);
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
+
 body {
-	line-height: 1;
-}
-h1 {
-	font-size: 1.5em;
-	margin-bottom: 10px;
-}
-p {
-	font-size: 1em;
-	line-height: 1.3em;
-	margin-bottom: 10px;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-nav ul {
-	list-style: none;
-}
-blockquote,
-q {
-	quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: none;
-}
-a {
-	margin: 0;
-	padding: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
-}
-ins {
-	background-color: #ff9;
-	color: #000;
-	text-decoration: none;
-}
-mark {
-	background-color: #ff9;
-	color: #000;
-	font-style: italic;
-	font-weight: bold;
-}
-del {
-	text-decoration: line-through;
-}
-abbr[title],
-dfn[title] {
-	border-bottom: 1px dotted;
-	cursor: help;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
-	margin: 1em 0;
-	padding: 0;
-}
-input,
-select {
-	vertical-align: middle;
+  background-image: url("https://files.catbox.moe/3ot2fi.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 12px;
+  text-shadow: 0px 0px 1px #bbb;
+  color: #c96855;
+  letter-spacing: 1px;
+  line-height: 11px;
 }
 
-/* main stuff */
-#desktop {
-	position: fixed;
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-image: url("https://files.catbox.moe/lhqoe9.png");
-	background-size: cover;
-	font-family: "Ubuntu-Mono", monospace;
-	font-size: 12px;
-	color: #330D0C;
-	box-sizing: border-box;
+#sitename {
+  display: flex; 
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
 }
 
-/* window behavior and styling */
-.window {
-	position: relative;
-	border-top: 1px solid #c4c4c4;
-	border-left: 1px solid #c4c4c4;
-	border-right: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-	background: #eee;
-	z-index: 1000;
-	overflow-y: hidden;
-	overflow-x: hidden;
+#sitename img {
+  width: 25px; 
+  height: auto;
+  margin-right: 10px; 
 }
 
-.window.closed {
-	display: none;
+#sitename a {
+  font: 30px "Workbench", monospace;
+  color: black;
+  text-decoration: none; 
 }
-.window.minimizedWindow {
-	display: none;
-}
-.window.fullSizeWindow {
-	top: 0; 
-	right: 0; 
-	left: 0; 
-	border-radius: 0;
-	bottom: 55px 
-}
-.fullSizeWindow .ui-resizable-handle {
-	display: none;
-}
-
-/* window headers */
-.windowHeader {
-    background: linear-gradient(to left, rgb(231, 196, 191), #facbb5);
-	text-align: right;
-    font-size: 8px;
-	border-bottom: 2px solid #c4c4c4;
-	padding: 2px;
-    padding-bottom: 2px;
-	cursor: move;
-	height: 20px;
-}
-.activeWindow .windowHeader {
-    background: linear-gradient(to left, rgb(150, 166, 240), rgb(183, 182, 252));
-}
-.windowHeader > span {
-	cursor: pointer;
-    border-top: 1px solid #4d4c4c;
-	border-left: 1px solid #4d4c4c;
-	border-right: 1px solid #e2e2e2;
-	border-bottom: 1px solid #e2e2e2;
-	margin-top: 2px;
-	margin-left: 4px;
-	position: relative;
-	overflow: hidden;
-    font-size: 8px; 
-    padding: 2px; 
-    font-family: Ubuntu Mono;
-    color: #4d4c4c;
-    line-height: 8px; 
-    width: 6px; 
-    height: 8px; 
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-}
-.windowHeader > span:hover {
-	background: #c4c4c4;
+#layout {
+  margin: auto;
+  width: 100%;
+  max-width: 720px;  
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-rows: auto;
+   column-gap: 5px;  
+  justify-content: center;
 }
 
-.windowHeader > span > span {
-	display: inline-block;
-	position: absolute;
-	padding: 5px;
-}
-.winminimize > span {
-	border-bottom: 3px solid #c4c4c4;
-}
-.winmaximize > span {
-	border: 2px solid #c4c4c4;
-	border-top: 3px solid #c4c4c4;
-}
-.winmaximize > span:nth-child(2) {
-	display: none;
-}
-.fullSizeWindow .winmaximize > span:nth-child(1) {
-	margin: 2px 0 0 -4px;
-}
-.fullSizeWindow .winmaximize > span:nth-child(2) {
-	display: inline-block;
-	top: 3px;
-	left: 12px;
+
+#header1, #navigation1, #footer1 {
+  grid-column: span 3; 
+  margin: 0;
+  padding: 10px;
 }
 
-.windowHeader > .windowButtons {
-    display: flex; 
-    justify-content: flex-end; 
+#header2 {
+  height: 40px;
+  background: transparent;
+  margin: 0;
+  padding: 10px;
 }
 
-.windowHeader > .winminimize,
-.windowHeader > .winmaximize,
-.windowHeader > .winclose {
-    background-color: transparent;
-    display: inline-flex; 
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
-    height: 8px; 
-    width: 8px; 
+#navigation2 {
+  height: 20px;
+  line-height: 20px;
+  background: transparent;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
 }
 
-.windowHeader > .winclose:hover {
-    background: #db3434;
-  }
-
-  .windowHeader > .winminimize:hover,
-.windowHeader > .winmaximize:hover {
-    background: #c4c4c4 50%;
+#navigation2 a {
+  width: 80px;
+  display: inline-block;
+  background: #fcdad6;
+  font: bold 9px "Ubuntu Mono", monospace;
+  text-transform: uppercase;
+  padding: 4px;
+  letter-spacing: 3px;
+  color: #d46666;
+  border-radius: 5px;
 }
 
-.wincontent {
-    padding: 5px;
-    background-color: #e8e6f2;
-	border-top: 1px solid #c4c4c4;
-	border-left: 1px solid #c4c4c4;
-	border-right: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
-    margin: 2px;
+#navigation2 a:hover {
+  background: #fff;
+  color: #ef7e6a;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-.windowHeader > strong {
-	float: left;
-	margin: 0px 3px 0 10px;
-	line-height: 20px;
-	font-size: 15px;
-    flex-grow: 1;
+
+#content1, #left1, #right1 {
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+}
+
+#left1 {
+  grid-column: 1; 
+  width: 200px;
+}
+
+#content1 {
+  grid-column: 2; 
+  width: 350px;
+}
+
+#right1 {
+  grid-column: 3; 
+  width: 200px;
+}
+
+#content2 {
+  margin: 0;
+  padding: 6px;
+}
+
+
+#left2 {
+  margin: 0;
+  padding: 6px;
+}
+
+.side-image-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .side-image {
-	width: 80px;
-	max-width: 80px;
-	height: auto;
-	padding: 5px;
+  width: 80%;
+  max-width: 180px;
+  height: auto;
+  padding: 5px;
 }
 
-/* songbox */
-#window5 {
-	width: auto;
-	height: auto;
-	position: absolute;
-	top: 10;
-	right: 10;
+#footer2 {
+  height: 100px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
 }
 
-#songBox {
-	font-family: Ubuntu-Mono, monospace;
-	padding: 1px;
-	margin: 1px;
-	align-content: center;
-	box-sizing: border-box;
-	overflow: hidden;
-	z-index: 1000;
+.box {
+  background: #fff;
+  border: 1px solid #ef7e6a;
+  border-top: 0;
+  box-shadow: 5px 6px #fcdad6;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 8px;
+  margin-bottom: 2px;
+  position: relative;
 }
 
-#trackName,
-#artistName,
-#albumName {
-	margin: 0;
-	padding: 0;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	display: block;
-	align-content: center;
+.box-without-title {
+  background: #fff;
+  border: 1px solid #ef7e6a;
+  box-shadow: 5px 6px #fcdad6;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  position: relative;
 }
 
-#trackName,
-#artistName,
-#albumName {
-	animation: none;
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#trackName.long-text,
-#artistName.long-text,
-#albumName.long-text {
-	animation: marquee 10s linear infinite;
+.title {
+  font: 10px monospace;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to right, #95b2fe, transparent 95%);
+  letter-spacing: 3px;
+  text-align: left;
+  padding: 4px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-#trackInfo {
-	margin-top: 5px;
+.window-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
-#trackName {
-	font-size: 12px;
-	font-weight: bold;
-	color: #ed3a24;
+.control-btn {
+  font-size: 8px;
+  width: 8px;
+  height: 8px;
+  padding-left: 8px;
+  margin-bottom: 0;
+  color: white;
+  fill: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
-#artistName {
-	font-size: 12px;
-	color: #95b2fe;
+.control-btn i {
+  font-size: 8px;
+  color: white;
+  transition: color 0.3s ease;
 }
 
-#albumName {
-	font-size: 10px;
-	color: #4d4c4c;
-	text-overflow: ellipsis;
+.control-btn:hover i {
+  color: #ed3a24;
 }
 
-#listening img {
-	max-width: 100%;
-	height: 100px;
-	align-content: center;
-	border-top: 1px solid #c4c4c4;
-	border-left: 1px solid #c4c4c4;
-	border-right: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
+.control-btn i:hover {
+  color: #ed3a24;
 }
 
-#listening {
-	position: relative;
-	align-content: center;
+a:link,
+a:visited,
+a:active {
+  color: #666;
+  text-decoration: none;
 }
 
-.long-text {
-	white-space: nowrap;
-	animation: marquee 10s linear infinite;
-}
-
-/* statuscafe */
-#window0 {
-	width: 200px;
-	height: 100px;
-	position: absolute;
-	top: 10;
-	right: 300;
+a:hover {
+  color: #ed3a24;
 }
 
 #statuscafe {
-	background-color: transparent;
-	border: 1px solid #95b2fe;
-	border-radius: 5px;
-	z-index: 1000;
-	font-family: Ubuntu-Mono, monospace;
+  padding: 0.5em;
+  background-color: transparent;
+  border: 1px solid grey;
 }
 
 #statuscafe-username {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 #statuscafe-content {
-	margin: 0 1em 0.5em 1em;
+  margin: 0 1em 0.5em 1em;
 }
 
-#songBox,
-#statuscafe {
-	display: inline-block;
-	vertical-align: top;
+#songBox {
+  width: auto;
+  height: auto;
+  padding: 1px;
+  margin: 1px;
+  align-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* taskbar related */
-	.taskbarPanel {
-        display: inline-flex;
-        align-items: center; /* Vertically center the taskbar items */
-        justify-content: center;
-        font-family: Ubuntu-Mono;
-        font-weight: bold;
-        cursor: pointer;
-        width: 7rem; /* Width of the taskbar panel */
-        height: 30px; /* Set a consistent height for the panels */
-        background: #f1c9de;
-        margin: 0 10px; /* Add some spacing between taskbar items */
-        line-height: normal; /* Ensure text is vertically centered */
-	box-shadow:
-		-1px -1px #e0dede,
-		-1px 0 #e0dede,
-		0 -1px #e0dede,
-		-2px -2px white,
-		-2px 0 white,
-		0 -2px white,
-		1px 1px #818181,
-		0 1px #818181,
-		1px 0 #818181,
-		1px -1px #e0dede,
-		-1px 1px #818181,
-		-2px 1px white,
-		-2px 2px #686868,
-		2px 2px #686868,
-		2px 0 #686868,
-		0 2px #686868,
-		1px -2px white,
-		2px -2px #686868;
+#trackName,
+#artistName,
+#albumName {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  align-content: center;
 }
 
-.taskbarPanel.activeTab {
-	box-shadow:
-    -1px -1px #e0dede,
-    -1px 0 #e0dede,
-    0 -1px #e0dede,
-    -2px -2px white,
-    -2px 0 white,
-    0 -2px white,
-    1px 1px #818181,
-    0 1px #818181,
-    1px 0 #818181,
-    1px -1px #e0dede,
-    -1px 1px #818181,
-    -2px 1px white,
-    -2px 2px #686868,
-    2px 2px #686868,
-    2px 0 #686868,
-    0 2px #686868,
-    1px -2px white,
-    2px -2px #686868;
-}
-.taskbarPanel.minimizedTab {
-	background: #ff8c53;
-}
-.taskbarPanel.minimizedTab:hover {
-	background: #ed3a24;
-}
-.taskbarPanel.closed {
-	display: none;
+#trackInfo {
+  margin-top: 5px;
+  text-overflow: ellipsis;
 }
 
-/* taskbar related */
-#taskbar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px; /* The height of the taskbar */
-    background: #e8e6f2;
-    border: outset 1px;
-    border-color: #818181;
-    padding: 0 10px; /* Add padding to give some spacing on the sides */
-    display: flex;
-    align-items: center; /* Vertically center taskbar items */
-    justify-content: space-between; /* Space out icons and other elements */
-    z-index: 9999;
-    flex-wrap: wrap;
+#trackName {
+  font-size: 12px;
+  font-weight: bold;
+  text-overflow: ellipsis;
 }
 
-#WindowsIcons {
-    display: flex;
-    align-items: center; /* Vertically center the icons */
-    gap: 10px;
-    overflow-x: auto;
-    padding: 0 10px;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    flex-grow: 1;
+#artistName {
+  font-size: 12px;
+  color: #555;
+  text-overflow: ellipsis;
 }
 
-/* Adjust individual icon styling to make sure they align properly */
-#WindowsIcons .icon {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    color: #686868;
-    position: relative;
+#albumName {
+  font-size: 10px;
+  color: #888;
+  text-overflow: ellipsis;
 }
 
-#WindowsIcons .icon a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#listening img {
+  max-width: 100%;
+  height: 100px;
+  align-content: center;
 }
 
-#WindowsIcons .icon a img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
+#listening {
+  position: relative;
+  align-content: center;
 }
 
-#WindowsIcons .icon a span {
-    font-size: 10px;
-    visibility: hidden;
-    position: absolute;
-    background-color: #333;
-    color: #fff;
-    padding: 3px 5px;
-    border-radius: 3px;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
+.side-image-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#WindowsIcons .icon a:hover span {
-    visibility: visible;
-    opacity: 1;
+.side-image {
+  width: 80%;
+  max-width: 180px;
+  height: auto;
+  padding: 5px;
 }
 
-/* Hover effects */
-#WindowsIcons a:hover {
-    color: rgb(71, 61, 66);
-    filter: drop-shadow(0 1px #F3A97A) drop-shadow(1px 0 #F3A97A)
-        drop-shadow(0 -1px #F3A97A) drop-shadow(-1px 0 #F3A97A)
-        drop-shadow(0 1px white) drop-shadow(1px 0 white)
-        drop-shadow(0 -1px white) drop-shadow(-1px 0 white)
-        drop-shadow(0 2px #F3A97A) drop-shadow(2px 0 #F3A97A)
-        drop-shadow(0 -2px #F3A97A) drop-shadow(-2px 0 #F3A97A)
-        drop-shadow(1px 1px 0 #7a696c) drop-shadow(-1px 1px 0 #7a696c);
+#menu a {
+  display: inline-block;
+  background: #f07671;
+  margin-bottom: 4px;
+  padding: 1px;
+  padding-top: 2px;
+  width: 150px;
+  line-height: 12px;
+  font: italic 12px "Ubuntu Mono", monospace;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
 }
 
-.lines {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	pointer-events: none;
-	z-index: 300;
-	opacity: 0.03;
+#menu a:hover {
+  display: inline-block;
+  background: #fcdad6;
+  margin-bottom: 4px;
+  padding: 1px;
+  padding-top: 2px;
+  width: 150px;
+  line-height: 12px;
+  font: italic 12px "ubuntu-mono", monospace;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  text-align: center;
+  border-radius: 5px;
+  color: #ed3a24;
 }
 
-.lines:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	pointer-events: none;
-	background: linear-gradient(
-		to bottom,
-		transparent 50%,
-		rgba(0, 0, 0, 0.5) 51%
-	);
-	background-size: 100% 4px;
-	will-change: background-size;
-	animation: scanlines 0.2s linear infinite;
+b {
+  color: #ed3a24;
+  font-weight: bold;
 }
 
-@keyframes scanlines {
-	from {
-		background: linear-gradient(
-			to bottom,
-			transparent 10%,
-			rgba(0, 0, 0, 0.5) 51%
-		);
-		background-size: 100% 4px;
-	}
-	to {
-		background: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 0.5) 50%,
-			transparent 51%
-		);
-		background-size: 100% 4px;
-	}
+i {
+  font-style: italic;
+  color: #aaa;
 }
 
-#menu-item:hover > .submenu {
-	visibility: visible;
-	opacity: 1;
+u {
+  color: #daac5c;
+  text-decoration: none;
 }
 
-.menu-item:hover > .submenu {
-	visibility: visible;
-	opacity: 1;
+::-webkit-scrollbar-thumb {
+  background-color: #ed3a24;
+  border-radius: 0;
+  border: 0px solid #ccc;
 }
 
-.window.fullSizeWindow {
-	bottom: 45px !important;
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background: transparent;
 }
 
-
-h1 {
-	font-size: 2rem;
-	font-family: Ubuntu-Mono;
-	color: #809ae2;
+textarea {
+  font: 10px "ubuntu-mono";
+  letter-spacing: 1px;
 }
 
-@keyframes marquee {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
-}
