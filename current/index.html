@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+		/>
+		<link rel="canonical" href="https://html5-templates.com/" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap"
+			rel="stylesheet"
+		/>
+		<title>NYA:</title>
+	</head>
+
+	<body>
+		<div id="desktop">
+			<div class="window" data-title="status.api" id="window0">
+				<div id="statuscafe">
+					<div id="statuscafe-username"></div>
+					<div id="statuscafe-content"></div>
+				</div>
+				<script
+					src="https://status.cafe/current-status.js?name=nyajax"
+					defer
+				></script>
+			</div>
+
+			<div class="window closed" data-title="gallery.jpg" id="window1">
+				<div id="gallery"></div>
+			</div>
+
+			<div class="window" data-title="about.txt" id="window2">
+				<div id="aboutme">about me section</div>
+			</div>
+
+			<div class="window closed" data-title="vlc.exe" id="window3">
+				<div id="media">media i like</div>
+			</div>
+
+			<div class="window closed" data-title="journal.epub" id="window4">
+				<div id="journal">journalling</div>
+			</div>
+
+			<div class="window" data-title="song.mp3" id="window5">
+				<div id="songBox">
+					<div id="listening"></div>
+				</div>
+			</div>
+
+			<div class="window closed" data-title="updates.rss" id="window6">
+				<b>
+					December 23th
+					<i>2024</i>
+				</b>
+				: CSS tweaking, addition of attabook iframe, addition of
+				text-overflow script for the lastfm widget.
+				<br />
+				<b>
+					December 24th
+					<i>2024</i>
+				</b>
+				: CSS tweaking, tweaking the overflow script, writing.
+				<b>
+					<br />
+					December 25th
+					<i>2024</i>
+				</b>
+				: CSS tweaking, addition of the cursor script, general
+				troubleshooting.
+			</div>
+
+			<div class="window" data-title="greetings" id="window7">
+				<h1>nyajax</h1>
+				<p>
+					<italic>meowmen & barkboys enjoyer &lt;3</italic>
+				</p>
+
+				<img
+					class="side-image"
+					src="https://files.catbox.moe/thumbs/t_p4i59r.png"
+					alt="side-image"
+				/>
+
+				<p>
+					Hi! Welcome to the nook of the internet I carved out for
+					myself. This website is hand-coded, hand-configured and
+					hand-styled by yours truly.
+				</p>
+
+				<p>
+					Slowly building towards a place I can call my own. Pixel by
+					pixel, codeblock by codeblock, byte by byte. Eventually I'll
+					get there.
+				</p>
+
+				<p>
+					This personal website arose from a desire to reclaim the
+					internet for my own enjoyment. I like digital design, wanted
+					to practice my html/css & javascript and was looking for a
+					new hobby. And here we are.
+				</p>
+
+				<p>
+					My name is Lars, but you can also call me Ajax. I'm a trans
+					guy from the Netherlands. This website is currently a big
+					work in progress. Nevertheless I hope you enjoy your
+					browsing experience.
+				</p>
+			</div>
+
+			<div id="taskbar">
+				<div id="WindowsIcons">
+					<a class="openWindow" data-id="0" title="statuscafe">
+						<img
+							class="status-image"
+							src="https://win98icons.alexmeub.com/icons/png/mshearts.png"
+							alt="status-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="1" title="gallery">
+						<img
+							class="gallery-image"
+							src="https://win98icons.alexmeub.com/icons/png/camera-2.png"
+							alt="gallery-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="2" title="about">
+						<img
+							class="about-image"
+							src="https://win98icons.alexmeub.com/icons/png/file_eye.png"
+							alt="about-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="3" title="media">
+						<img
+							class="media-image"
+							src="https://win98icons.alexmeub.com/icons/png/wm_file-5.png"
+							alt="media-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="4" title="journal">
+						<img
+							class="journal-image"
+							src="https://win98icons.alexmeub.com/icons/png/file_lines-0.png"
+							alt="journal-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="5" title="music">
+						<img
+							class="song-image"
+							src="https://win98icons.alexmeub.com/icons/png/cd_audio_cd_a-2.png"
+							alt="songs-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="6" title="updates">
+						<img
+							class="updates-image"
+							src="https://win98icons.alexmeub.com/icons/png/newspaper.png"
+							alt="updates-image"
+						/>
+					</a>
+
+					<a class="openWindow" data-id="7" title="greetings">
+						<img
+							class="greetings-image"
+							src="https://win98icons.alexmeub.com/icons/png/computer-5.png"
+							alt="greetings-image"
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const USERNAME = "nyajax";
+			const BASE_URL = `https://lastfm-last-played.biancarosa.com.br/${USERNAME}/latest-song`;
+
+			const getTrack = async () => {
+				try {
+					const request = await fetch(BASE_URL);
+					const json = await request.json();
+					console.log(json);
+
+					let isPlaying = json.track['@attr']?.nowplaying || false;
+					console.log(isPlaying);
+
+					const listeningElement = document.getElementById("listening");
+
+					// Clear the previous content before adding new content
+					listeningElement.innerHTML = '';
+
+					if (!isPlaying) {
+						listeningElement.innerHTML = `
+				                <img src="https://files.catbox.moe/kke6sy.jpg" alt="Cat Image" class="side-image">
+				                <div id="trackInfo">
+				                    <h3 id="trackName">No music is playing</h3>
+				                </div>
+				            `;
+						return;
+					}
+
+					const trackName = json.track.name;
+					const artistName = json.track.artist['#text'];
+					const albumName = json.track.album['#text'];
+					const albumImage = json.track.image[3]['#text'];
+
+					listeningElement.innerHTML = `
+				            <img src="${albumImage}" alt="Album Image">
+				            <div id="trackInfo">
+				                <div id="trackName" class="marquee-wrapper">
+				                    <div class="marquee-content">
+				                        <span>${trackName}</span>
+				                    </div>
+				                </div>
+				                <div id="artistName" class="marquee-wrapper">
+				                    <div class="marquee-content">
+				                        <span>${artistName}</span>
+				                    </div>
+				                </div>
+				                <div id="albumName" class="marquee-wrapper">
+				                    <div class="marquee-content">
+				                        <span>${albumName}</span>
+				                    </div>
+				                </div>
+				            </div>
+				        `;
+
+					// Ensure animations are checked after the content is updated
+					requestAnimationFrame(checkOverflow);
+
+				} catch (error) {
+					console.error("Error fetching track data:", error);
+					// Handle fetch errors gracefully
+					const listeningElement = document.getElementById("listening");
+					listeningElement.innerHTML = `
+				            <h3>Could not fetch track data</h3>
+				        `;
+				}
+			};
+
+			// Ensure track is updated when the page loads
+			getTrack();
+
+			// Refresh track every 10 seconds
+			setInterval(getTrack, 10000);
+
+			function checkOverflow() {
+				const elements = ['trackName', 'artistName', 'albumName'];
+
+				const checkElementOverflow = (elementId) => {
+					const element = document.getElementById(elementId);
+					return element.scrollWidth > element.clientWidth;
+				};
+
+				elements.forEach(elementId => {
+					const element = document.getElementById(elementId);
+					if (checkElementOverflow(elementId)) {
+						element.classList.add('long-text');
+					} else {
+						element.classList.remove('long-text');
+					}
+				});
+			}
+
+			getTrack();
+
+			setInterval(getTrack, 10000);
+
+			window.addEventListener('resize', () => {
+				clearTimeout(window.resizeTimeout);
+				window.resizeTimeout = setTimeout(checkOverflow, 150);
+			});
+		</script>
+
+		<script>
+			'use strict';
+
+			let i = 0;
+			let minimizedWidth = [];
+			let minimizedHeight = [];
+			let windowTopPos = [];
+			let windowLeftPos = [];
+			let panel, id;
+
+			function adjustFullScreenSize() {
+			    $(".fullSizeWindow .wincontent").css("width", (window.innerWidth - 32));
+			    $(".fullSizeWindow .wincontent").css("height", (window.innerHeight - 98));
+			}
+
+			function makeWindowActive(thisid) {
+			    $(".window").each(function () {
+			        $(this).css('z-index', $(this).css('z-index') - 1);
+			    });
+			    $("#window" + thisid).css('z-index', 1000);
+			    $(".window").removeClass("activeWindow");
+			    $("#window" + thisid).addClass("activeWindow");
+
+			    $(".taskbarPanel").removeClass('activeTab');
+			    $("#minimPanel" + thisid).addClass("activeTab");
+			}
+
+			function minimizeWindow(id) {
+			    windowTopPos[id] = $("#window" + id).css("top");
+			    windowLeftPos[id] = $("#window" + id).css("left");
+
+			    $("#window" + id).animate({
+			        top: 800,
+			        left: 0
+			    }, 200, function () {
+			        $("#window" + id).addClass('minimizedWindow');
+			        $("#minimPanel" + id).addClass('minimizedTab');
+			        $("#minimPanel" + id).removeClass('activeTab');
+			    });
+			}
+
+			function openWindow(id) {
+			    if ($('#window' + id).hasClass("minimizedWindow")) {
+			        openMinimized(id);
+			    } else {
+			        makeWindowActive(id);
+			        $("#window" + id).removeClass("closed");
+			        $("#minimPanel" + id).removeClass("closed");
+			    }
+			}
+
+			function closeWindwow(id) {
+			    $("#window" + id).addClass("closed");
+			    $("#minimPanel" + id).addClass("closed");
+			}
+
+			function openMinimized(id) {
+			    $('#window' + id).removeClass("minimizedWindow");
+			    $('#minimPanel' + id).removeClass("minimizedTab");
+			    makeWindowActive(id);
+
+			    $('#window' + id).animate({
+			        top: windowTopPos[id],
+			        left: windowLeftPos[id]
+			    }, 200);
+			}
+
+			document.addEventListener("DOMContentLoaded", function () {
+			    let offsetX = 20; // X offset for each new window to prevent overlap
+			    let offsetY = 20; // Y offset for each new window
+			    let windowSpacing = 40; // Space between windows
+
+			    $(".window").each(function () {
+			        let windowWidth = $(this).width(); // Get the window's width
+			        let windowHeight = $(this).height(); // Get the window's height
+			        $(this).css('z-index', 1000);
+			        $(this).attr('data-id', i);
+
+			        let initialLeft = Math.min(window.innerWidth - windowWidth - offsetX, offsetX);
+			        let initialTop = offsetY + (i * (windowHeight + windowSpacing));
+
+			        if (initialTop + windowHeight > window.innerHeight) {
+			            initialTop = window.innerHeight - windowHeight - offsetY;
+			        }
+
+			        if (initialLeft + windowWidth > window.innerWidth) {
+			            windowWidth = window.innerWidth - offsetX;
+			            $(this).css('width', windowWidth);
+			        }
+
+			        if (initialTop + windowHeight > window.innerHeight) {
+			            windowHeight = window.innerHeight - offsetY;
+			            $(this).css('height', windowHeight);
+			        }
+
+			        $(this).css({
+			            'top': initialTop + 'px',
+			            'left': initialLeft + 'px',
+			            'position': 'absolute'
+			        });
+
+			        minimizedWidth[i] = windowWidth;
+			        minimizedHeight[i] = windowHeight;
+			        windowTopPos[i] = $(this).css("top");
+			        windowLeftPos[i] = $(this).css("left");
+
+			        $("#taskbar").append('<div class="taskbarPanel" id="minimPanel' + i + '" data-id="' + i + '">' + $(this).attr("data-title") + '</div>');
+
+			        if ($(this).hasClass("closed")) {
+			            $("#minimPanel" + i).addClass('closed');
+			        }
+
+			        $(this).attr('id', 'window' + (i++));
+			        $(this).wrapInner('<div class="wincontent"></div>');
+
+			        $(this).prepend('<div class="windowHeader">' +
+			            '<strong>' + $(this).attr("data-title") + '</strong>' +
+			            '<span title="Minimize" class="winminimize">_</span>' +
+			            '<span title="Maximize" class="winmaximize">□</span>' +
+			            '<span title="Close" class="winclose">×</span>' +
+			            '</div>');
+			    });
+
+			    $("#minimPanel" + (i - 1)).addClass('activeTab');
+			    $("#window" + (i - 1)).addClass('activeWindow');
+
+			    $(".wincontent").resizable();
+			    $(".window").draggable({ cancel: ".wincontent" });
+
+			    $(".window").mousedown(function () {
+			        makeWindowActive($(this).attr("data-id"));
+			    });
+
+			    $(".winclose").click(function () {
+			        closeWindwow($(this).parent().parent().attr("data-id"));
+			    });
+
+			    $(".winminimize").click(function () {
+			        minimizeWindow($(this).parent().parent().attr("data-id"));
+			    });
+
+			    $(".winmaximize").click(function () {
+			        if ($(this).parent().parent().hasClass('fullSizeWindow')) {
+			            $(this).parent().parent().removeClass('fullSizeWindow');
+			            $(this).parent().parent().children(".wincontent").height(minimizedHeight[$(this).parent().parent().attr("data-id")]);
+			            $(this).parent().parent().children(".wincontent").width(minimizedWidth[$(this).parent().parent().attr("data-id")]);
+			        } else {
+			            $(this).parent().parent().addClass('fullSizeWindow');
+			            minimizedHeight[$(this).parent().parent().attr('data-id')] = $(this).parent().parent().children(".wincontent").height();
+			            minimizedWidth[$(this).parent().parent().attr('data-id')] = $(this).parent().parent().children(".wincontent").width();
+			            adjustFullScreenSize();
+			        }
+			    });
+
+			    adjustFullScreenSize();
+
+			    $(".taskbarPanel").click(function () {
+			        id = $(this).attr("data-id");
+			        if ($(this).hasClass("activeTab")) {
+			            minimizeWindow($(this).attr("data-id"));
+			        } else {
+			            if ($(this).hasClass("minimizedTab")) {
+			                openMinimized(id);
+			            } else {
+			                makeWindowActive(id);
+			            }
+			        }
+			    });
+
+			    $(".openWindow").click(function () {
+			        openWindow($(this).attr("data-id"));
+			    });
+			});
+		</script>
+	</body>
+</html>
